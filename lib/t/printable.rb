@@ -121,7 +121,7 @@ module T
         print_identicon(from_user, message)
         say
       when 'auto'
-        say("   @#{from_user}", [:bold, :yellow])
+        say("   @#{from_user}", %i[bold yellow])
         print_wrapped(HTMLEntities.new.decode(message), indent: 3)
       else
         say("   @#{from_user}")
